@@ -1,6 +1,9 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { cookies } from 'next/headers'
+import { ReduxProvider } from '@/redux/provider'
+import { Header } from '@/components/layout/Header'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,9 +17,17 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const cookieStore = cookies()
+  const theme = cookieStore.get('color-theme')
+  const themeClass = theme ? theme.value : 'not'
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang='en' className={themeClass}>
+      <ReduxProvider>
+        <body className={inter.className}>
+          <Header></Header>
+          <main>{children}</main>
+        </body>
+      </ReduxProvider>
     </html>
   )
 }
