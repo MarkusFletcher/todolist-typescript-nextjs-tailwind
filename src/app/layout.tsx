@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang='en' className={themeClass}>
       <ReduxProvider>
-        <body className={inter.className}>
+        <body className={`${inter.className} bg-gray-700 dark:bg-black`}>
           <Header></Header>
           <main>{children}</main>
         </body>

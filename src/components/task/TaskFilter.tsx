@@ -25,14 +25,18 @@ export const TaskFilter: React.FC = () => {
 
   return (
     <select
-      className='p-2.5 rounded-md border border-gray-300 cursor-pointer'
+      className='p-2.5 rounded-md border border-gray-300 cursor-pointer dark:bg-transparent'
       name='filter'
       id='filter'
       onChange={onSetFilter}
       value={filter}
     >
       {taskFilters.map(filter => (
-        <option value={filter.value} key={filter.value}>
+        <option
+          className='dark:bg-slate-900'
+          value={filter.value}
+          key={filter.value}
+        >
           {filter.title}
         </option>
       ))}

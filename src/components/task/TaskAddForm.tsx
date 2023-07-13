@@ -46,7 +46,7 @@ export const TaskAddForm: React.FC<Props> = ({}) => {
             Название
           </label>
           <input
-            className='appearance-none border border-gray-300 rounded-md w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+            className='appearance-none border border-gray-300 rounded-md w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline dark:bg-slate-900 dark:text-white'
             id='taskTitle'
             type='text'
             placeholder='Название'
@@ -61,7 +61,7 @@ export const TaskAddForm: React.FC<Props> = ({}) => {
           Описание
         </label>
         <textarea
-          className='appearance-none border border-gray-300 rounded-md w-full py-2 px-3 max-h-80 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
+          className='appearance-none border border-gray-300 rounded-md w-full py-2 px-3 max-h-80 text-gray-700 leading-tight focus:outline-none focus:shadow-outline dark:bg-slate-900 dark:text-white'
           name='description'
           id='taskDescription'
           rows={10}
@@ -71,14 +71,14 @@ export const TaskAddForm: React.FC<Props> = ({}) => {
         <div className='mt-2 text-center sm:text-left items-center gap-2 sm:flex'>
           <button
             type='button'
-            className='w-full mt-2 p-2.5 flex-1 text-gray-800 rounded-md outline-none border border-gray-300 ring-offset-2 ring-gray-600 focus:ring-2'
+            className='w-full mt-2 p-2.5 flex-1 text-gray-800 rounded-md outline-none border border-gray-300 ring-offset-2 ring-gray-600 focus:ring-2 dark:bg-slate-900 dark:text-white'
             onClick={() => setShow(false)}
           >
             Отмена
           </button>
           <button
             type='submit'
-            className='w-full mt-2 p-2.5 flex-1 text-white bg-green-600 rounded-md outline-none ring-offset-2 ring-green-600 focus:ring-2'
+            className='w-full mt-2 p-2.5 flex-1 text-white bg-cyan-600 rounded-md outline-none ring-offset-2 ring-cyan-600 focus:ring-2'
           >
             Добавить
           </button>

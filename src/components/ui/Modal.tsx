@@ -32,7 +32,8 @@ export const Modal: React.FC<Props> = ({
             onClick={() => setShowModal(false)}
           ></div>
           <div className='flex items-center min-h-screen px-4 py-8'>
-            <div className='relative w-full max-w-lg p-4 mx-auto bg-white rounded-md shadow-lg'>
+            х
+            <div className='relative w-full max-w-lg p-4 mx-auto bg-white rounded-md shadow-lg dark:bg-slate-900 dark:text-white'>
               <div className='mt-3'>{children}</div>
             </div>
           </div>
