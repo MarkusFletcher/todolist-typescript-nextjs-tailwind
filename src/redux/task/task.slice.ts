@@ -1,4 +1,3 @@
-'use client'
 import { ITaskState, EnumTaskFilters } from '@/types/task.interface'
 import { createSlice } from '@reduxjs/toolkit'
 import { v4 as uuidv4 } from 'uuid'
