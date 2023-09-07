@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid'
 
 import { tasks } from '@/data/tasks'
 
-const initialState: ITaskState = localStorage.getItem('task')
+const initialState: ITaskState = localStorage?.getItem('task')
   ? JSON.parse(localStorage.getItem('task') as string)
   : {
       tasks: tasks,
@@ -26,7 +26,7 @@ export const taskSlice = createSlice({
     },
     toggleCompletionTask: (state, { payload }) => {
       const taskIdx = state.tasks.findIndex(task => task.id === payload)
-      if (taskIdx !== NaN) {
+      if (!Number.isNaN(taskIdx)) {
         state.tasks[taskIdx].completed = !state.tasks[taskIdx].completed
       }
     },
